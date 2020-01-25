@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Unit2;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, uPerson;
 
 type
   TForm1 = class(TForm)
@@ -29,13 +29,17 @@ implementation
 
 procedure TForm1.btnShowClick(Sender: TObject);
 var
-  data : string;
+  contact : TPerson;
 begin
-  Form2.Show;
-  data := 'Hello ' + edtName.Text + #13 +
-          'Phone: ' + edtPhoneNumber.Text;
-  Form2.lblData.Caption := data;
+  try
+    contact:= contact.Create;
+    contact.Name := edtName.Text;
+    contact.PhoneNumber := StrToInt(edtPhoneNumber.Text);
 
+    ShowMessage('Contact name: ' + contact.Name + sLineBreak +
+                'Contact phone: ' + IntToStr(contact.PhoneNumber));
+  finally
+    FreeAndNil(contact);
+  end;
 end;
-
 end.

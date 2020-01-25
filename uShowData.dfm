@@ -3,8 +3,8 @@ object Form1: TForm1
   Top = 0
   ActiveControl = edtName
   Caption = 'Form1'
-  ClientHeight = 148
-  ClientWidth = 234
+  ClientHeight = 181
+  ClientWidth = 249
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -44,7 +44,7 @@ object Form1: TForm1
   end
   object btnShow: TButton
     Left = 88
-    Top = 96
+    Top = 104
     Width = 75
     Height = 25
     Caption = 'Show'
