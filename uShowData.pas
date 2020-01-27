@@ -31,15 +31,12 @@ procedure TForm1.btnShowClick(Sender: TObject);
 var
   contact : TPerson;
 begin
-  try
     contact:= contact.Create;
-    contact.Name := edtName.Text;
-    contact.PhoneNumber := StrToInt(edtPhoneNumber.Text);
+    contact.FName := edtName.Text;
+    contact.FPhoneNumber := StrToInt(edtPhoneNumber.Text);
 
-    ShowMessage('Contact name: ' + contact.Name + sLineBreak +
-                'Contact phone: ' + IntToStr(contact.PhoneNumber));
-  finally
-    FreeAndNil(contact);
-  end;
+    ShowMessage('Contact name: ' + contact.FName + sLineBreak +
+                'Contact phone: ' + IntToStr(contact.FPhoneNumber));
+
 end;
 end.
