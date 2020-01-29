@@ -2,7 +2,8 @@ program prjContactBook;
 
 uses
   Vcl.Forms,
-  uShowData in 'uShowData.pas' {Form1};
+  uShowData in 'uShowData.pas' {Form1},
+  uPerson in 'uPerson.pas';
 
 {$R *.res}
 

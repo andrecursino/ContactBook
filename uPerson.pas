@@ -5,13 +5,12 @@ interface
 type
   TPerson = class
   private
+
+  public
     Fid   : Integer;
     FName : String;
     FPhoneNumber : String;
-  public
-
   end;
-
 
 implementation
 

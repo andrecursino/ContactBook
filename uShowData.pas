@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, uPerson;
 
 type
   TForm1 = class(TForm)
@@ -28,9 +28,13 @@ implementation
 {$R *.dfm}
 
 procedure TForm1.btnShowClick(Sender: TObject);
+var
+  Person : TPerson;
 begin
-  ShowMessage('Name is: ' + edtName.Text);
-  ShowMessage('Telephone: ' + edtPhoneNumber.Text);
+  Person.FName := edtName.Text;
+  Person.FPhoneNumber := edtPhoneNumber.Text;
+  ShowMessage('Name is: ' + Person.FName);
+  ShowMessage('Telephone: ' + Person.FPhoneNumber);
 end;
 
 end.
