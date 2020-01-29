@@ -2,16 +2,17 @@ unit uPerson;
 
 interface
 
-type TPerson = class
-  public
+type
+  TPerson = class
+  private
+    Fid   : Integer;
     FName : String;
-    FPhoneNumber : Integer;
+    FPhoneNumber : String;
+  public
 
-end;
+  end;
+
 
 implementation
-
-{ TPerson }
-
 
 end.
