@@ -29,12 +29,13 @@ implementation
 
 procedure TForm1.btnShowClick(Sender: TObject);
 var
-  Person : TPerson;
+  Contact : TContact;
 begin
-  Person.FName := edtName.Text;
-  Person.FPhoneNumber := edtPhoneNumber.Text;
-  ShowMessage('Name is: ' + Person.FName);
-  ShowMessage('Telephone: ' + Person.FPhoneNumber);
+  Contact := TContact.Create;
+  Contact.Name := edtName.Text;
+  Contact.PhoneNumber := edtPhoneNumber.Text;
+  ShowMessage(Contact.ShowData);
+  Contact.Free;
 end;
 
 end.
